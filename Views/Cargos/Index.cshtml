@@ -5,15 +5,28 @@
 }
 
 <h1>Index</h1>
+<style>
+    body{
+        background:black;
+        color:white;
+    }
+</style>
+
+
+
+
+
+
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" style="color:yellow">Create New</a>
 </p>
-<table class="table">
+<table class="table" style="color:yellow">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                @Html.DisplayNameFor(model => model.Description) 
+                
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Active)
@@ -28,7 +41,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
+                @Html.DisplayFor(modelItem => item.Description)                
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Active)
@@ -37,9 +50,9 @@
                 @Html.DisplayFor(modelItem => item.User)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" style="color:yellow" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" style="color:yellow" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" style="color:yellow" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }
